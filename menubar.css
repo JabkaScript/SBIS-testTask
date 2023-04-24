@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Azeret Mono";
+    src: url("AzeretMono-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("Inter-VariableFont_slnt,wght.ttf");
+}
+
+html[theme="main"]{
+    --bg-color:#E9E9E3;
+    --text-color:#6F6F64;
+    --btn-color:#6F6F64;
+    --btn-text:#FFFFFF;
+}
+
+
+
+body{
+    font-family: "Azeret Mono";
+    background-color: var(--bg-color);
+}
+
+.container {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+#pageRow{
+    min-height: 100vh;
+    justify-content: center;
+    padding: 120px 50px;
+    column-gap: 130px;
+}
+#pageRow > .flex-column{
+    width: calc(50% - 130px);
+    min-width: calc(50% - 130px);
+}
+
+#menuTextColumn{
+    row-gap: 18px;
+}
+
+h2{
+    width: fit-content;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#menuDescr{
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 32px;
+    width: 100%;
+}
+
+#textNBtns{
+    row-gap: 75px;
+}
+
+#menuBtns{
+    row-gap: 12px;
+}
+
+.menuBtn, .menuBtn-active{
+    font-family: "Inter";
+    height: 58px;
+    background: none;
+    color:var(--text-color);
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid var(--btn-color);
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuBtn-active{
+    background: var(--btn-color);
+    color:var(--btn-text);
+}
+
+.menuImg, .menuImg-active{
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    display: none;
+}
+
+.menuImg-active{
+    display: flex;
+}
